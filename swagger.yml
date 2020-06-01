@@ -1,0 +1,51 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: TSS Data Aggregator
+paths:
+  /raffles/{id}:
+    put:
+      description: Creates or updates a raffle
+      operationId: upsertRaffle
+      requestBody:
+        description: Raffle to be created/updated
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RaffleUpdate'
+      responses:
+        '200':
+          description: Update successful
+components:
+  schemas:
+    RaffleUpdate:
+      type: object
+      required:
+        - name
+        - slug
+      properties:
+        name:
+          type: string
+        slug:
+          type: string
+        price:
+          type: object
+          properties:
+            currency: 
+              type: string
+            amount: 
+              type: string
+             
+
+    # Error:
+    #   type: object
+    #   required:
+    #     - code
+    #     - message
+    #   properties:
+    #     code:
+    #       type: integer
+    #       format: int32
+    #     message:
+    #       type: string

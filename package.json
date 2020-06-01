@@ -1,0 +1,24 @@
+{
+  "name": "express-swagger-sls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "koa": "^2.12.0",
+    "koa-router": "^9.0.1",
+    "koa2-swagger-ui": "^3.0.0",
+    "serverless-http": "^2.5.0",
+    "swagger-ui-express": "^4.1.4",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.3.0"
+  }
+}
